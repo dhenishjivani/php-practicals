@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: #E5C1CD;
+    padding: 2.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+select {
+    margin-left: 5rem !important;
+}
+
+.background {
+    display: flex;
+    width: 100% ;
+}
+.darkside {
+    width: 50% ;
+    height: 95vh;
+    background-color: #2460A7FF;
+}
+
+.lightside {
+    width: 50%;
+    height: 95vh;
+    background-color: #85B3D1FF;
+}
+
+.container {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 1.2rem;
+    border-radius: 1rem;
+}
+
+#Msg {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.input-group-text {
+    padding-right: 3rem !important;
+    margin-left: 3rem;
+    border: none !important;
+    color: #000 !important;
+}
+
+.numberSpace {
+    margin-bottom: 2rem;
+}
+
+.selectValue {
+    outline: none !important;
+    background: transparent !important;
+}
