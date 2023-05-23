@@ -23,21 +23,21 @@ function dived($n){
     try{
         if($n < 0){
             throw new exception("<br>Enter positive number");
-        }else if($n == 0){
+        } else if($n == 0) { 
             throw new myexception("<br>You can't divid any number with zero(0)");
-        }else{
+        } else {
             $result = 10 / $n ;
             echo  "<br>" . $result ;
         }
-    }catch(exception $jd){
+    } catch(exception $jd) {
         echo "<br>";
         echo $jd->getMessage() . "  ";
         echo $jd->getLine() . "<br>";
         echo $jd->getFile();
-    }catch(myexception $jd){
+    } catch(myexception $jd) {
         echo $jd->errorMessage();
     }
-    finally{
+    finally {
         echo "<br>It's just beginning my friend!";
         echo "\t\tThe game is on!";
     }

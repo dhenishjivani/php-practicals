@@ -19,23 +19,32 @@ $_SESSION['flag'] = "speed";
 </head>
 
 <body>
-    <div class="container" style="margin: 5rem auto;">
-    <p id="Msg"></p>
-        <div class="input-group mb-3 w-50">
-            <!-- <label for="">From</label> -->
-            <span class="input-group-text" id="inputGroup-sizing-default">From</span>
-            <input type="number" id="data" data-flag="speed" class="form-control w-25">
-            <select name="" id="from"  data-flag="speed">
-                <option value="fromKM">Kilometre/hour</option>
+
+    <div class="background">
+
+        <div class="darkside">
+
+        </div>
+        <div class="lightside">
+
+        </div>
+    </div>
+    <div class="container" style="background-color: #fff; max-width: 500px;">
+        <p id="Msg"></p>
+        <input type="number" id="data" data-flag="speed" class="form-control numberSpace" placeholder="Enter a Value">
+        <div class="input-group mb-3">
+            <span class="input-group-text btn btn-outline-secondary">From</span>
+            <select name="" id="from" data-flag="speed" class="input-group-text selectValue">
+            <option value="fromKM">Kilometre/hour</option>
                 <option value="fromMeter">Metre/second</option>
             </select>
         </div>
-        <div class="second-portion">
-            <label for="">To</label>
-            <select name="" id="to"  data-flag="speed">
-                <option value="toKM">Kilometre/hour</option>
+        <div class="input-group mb-3">
+        <span class="input-group-text btn btn-outline-secondary">&nbsp;&nbsp;To</span>
+        <select name="" id="to" data-flag="speed" class="input-group-text selectValue">
+        <option value="toKM">Kilometre/hour</option>
                 <option value="toMeter">Metre/second</option>
-            </select>
+        </select>
         </div>
         <label for="">Answer</label>
         <div class="answer">

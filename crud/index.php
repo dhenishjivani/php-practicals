@@ -30,7 +30,7 @@ include_once 'connection.php';
       </div>
       <div class="mb-3">
         <label class="form-label">Image</label>
-        <input type="file" class="form-control" name="image[]" multiple>
+        <input type="file" class="form-control" name="image[]" accept="image/*" multiple>
         <div id='image'>  </div>
         
       </div>

@@ -14,13 +14,13 @@ $("#form_data").submit(function (e) {
     e.preventDefault();
     var token = $("#token").val();
     if(token != 'null') {
-        var up = 'update.php';
+        var url = 'update.php';
     } else {
-        var up = 'insert.php';
+        var url = 'insert.php';
     }
     $.ajax({
         type: 'POST',
-        url: up,
+        url: url,
         data: new FormData(this),
         processData: false,
         contentType: false,
@@ -58,6 +58,7 @@ function updaterow(id){
             uid: id
         },
         success: function (x) {
+            console.log(x);
             var a = JSON.parse(x);
             console.log(a);
             $("#token").val(a[0]["id"]);
@@ -65,14 +66,37 @@ function updaterow(id){
             $("#number").val(a[0]["mobile"]);
             console.log(a[1]);
             $("#image").html('');
+           
             for(var i=0 ; i < a[1].length ; i++){
-                $("#image").append("<img src='./uploaded/" + a[1][i][0] +" ' style = 'height: 100px; width: 100px;'>");
+                let imgId = a[1][i][0];
+                    // console.log(imgId);
+                
+                let icon = $("<span>").attr({class:"crossIcon", id : imgId}).text("X").click(function(){
+                    // console.log(imgId);
+                    deleteImage(imgId);
+                });
+                $("#image").append("<img src='./uploaded/" + a[1][i][1] +" ' style = 'height: 100px; width: 100px;'>",icon);
+                // $("#image").append(icon);
             }
         },
     });
 }
 
-
+function deleteImage(imgId){
+    const id = imgId;
+    $.ajax({
+      url : "deleteimage.php",
+      type : "POST",
+      data : {imgId : id},
+      success : function(returnData){
+        console.log(returnData);
+        $("#"+id).prev().remove();
+        $("#"+id).remove(".crossIcon");
+        getData();
+      }
+    });
+    // console.log("delete",imgId);
+}
 // $("#form_data").submit(function (e) {
 //     e.preventDefault();
 //     $.ajax({

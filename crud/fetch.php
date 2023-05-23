@@ -8,7 +8,7 @@ if(isset($_POST['uid'])){
     $resu = mysqli_query($conn , $que);
     $row = mysqli_fetch_assoc($resu);
 
-    $que2 = "SELECT Image FROM Image WHERE id = $id";
+    $que2 = "SELECT image_id ,  Image FROM Image WHERE id = $id";
     $resu2 = mysqli_query($conn , $que2);
     $row2 = mysqli_fetch_all($resu2);
 

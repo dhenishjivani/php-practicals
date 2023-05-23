@@ -27,17 +27,17 @@
         <div class="input-group mb-3">
             <span class="input-group-text btn btn-outline-secondary">From</span>
             <select name="" id="from" data-flag="area" class="input-group-text selectValue">
-                <option value="Kilometer">Kilometer</option>
-                <option value="Meter">Meter</option>
-                <option value="Foot">Foot</option>
+                <option value="Kilometer">Square Kilometer</option>
+                <option value="Meter">Square Meter</option>
+                <option value="Foot">Square Foot</option>
             </select>
         </div>
         <div class="input-group mb-3">
         <span class="input-group-text btn btn-outline-secondary">&nbsp;&nbsp;To</span>
         <select name="" id="to" data-flag="area" class="input-group-text selectValue">
-            <option value="Kilometer"> &nbsp; &nbsp;Kilometer</option>
-            <option value="Meter">Meter</option>
-            <option value="Foot">Foot</option>
+            <option value="Kilometer"> &nbsp; &nbsp;Square Kilometer</option>
+            <option value="Meter">Square Meter</option>
+            <option value="Foot">Square Foot</option>
         </select>
         </div>
         <label for="">Answer</label>

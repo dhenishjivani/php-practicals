@@ -7,25 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="./jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
-    <div class="container" style="background-color: #676767; margin: 5rem auto; max-width: 500px;">
-    <p id="Msg"></p>
-        <div class="first-portion">
-            <label for="">From</label>
-            <input type="number" id="data" data-flag="tempature">
-            <select name="" id="from" data-flag="tempature">
+    <div class="background">
+
+        <div class="darkside">
+
+        </div>
+        <div class="lightside">
+
+        </div>
+    </div>
+    <div class="container" style="background-color: #fff; max-width: 500px;">
+        <p id="Msg"></p>
+        <input type="number" id="data" data-flag="tempature" class="form-control numberSpace" placeholder="Enter a Value">
+        <div class="input-group mb-3">
+            <span class="input-group-text btn btn-outline-secondary">From</span>
+            <select name="" id="from" data-flag="tempature" class="input-group-text selectValue">
                 <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
         </div>
-        <div class="second-portion">
-            <label for="">To</label>
-            <select name="" id="to" data-flag="tempature">
-            <option value="Fahrenheit">Fahrenheit</option>
+        <div class="input-group mb-3">
+            <span class="input-group-text btn btn-outline-secondary">&nbsp;&nbsp;To</span>
+            <select name="" id="to" data-flag="tempature" class="input-group-text selectValue">
+                <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Kelvin">Kelvin</option>
             </select>

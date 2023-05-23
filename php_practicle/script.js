@@ -8,6 +8,7 @@
 //     console.log($("#resultData").val());
 // })
 
+
 var flag, url;
 const changeInput = function (e) {
     // alert(url);
@@ -17,19 +18,23 @@ const changeInput = function (e) {
         inputTo: $("#to").val(),
         getValue: true
     };
-    if ((obj.inputval !== "")) {
-        $("#Msg").hide();
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: obj,
-            success: function (returnData) {
-                $("#resultData").html(returnData);
-            }
-        });
+    if ((obj.inputval < 0) && (flag !== 'tempature')) {
+        $("#Msg").show().html("Please Enter Positive Number");
     } else {
-        $("#resultData").html(0);
-        $("#Msg").show().html("Please Enter Number");
+        if (((obj.inputval == "") || (isNaN(obj.inputval)))) {
+            $("#resultData").html(0);
+            $("#Msg").show().html("Please Enter Number");
+        } else {
+            $("#Msg").hide();
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: obj,
+                success: function (returnData) {
+                    $("#resultData").html(returnData);
+                }
+            });
+        }
     }
 }
 
