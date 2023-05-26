@@ -1,17 +1,5 @@
-// $(document).ready(function () {
-// $("#fromSpeed").on("change", function () {
-//     var data = $("#fromSpeed").val();
-//     alert($("#data").val());
-//     console.log($("#data").val());
-//     $("#resultData").html($("#data").val() * (5/18));
-//     // $("#resultData").html = echo '$("#data").val()';
-//     console.log($("#resultData").val());
-// })
-
-
 var flag, url;
 const changeInput = function (e) {
-    // alert(url);
     const obj = {
         inputval: $("#data").val(),
         inputFrom: $("#from").val(),
@@ -39,12 +27,8 @@ const changeInput = function (e) {
 }
 
 $("#to").add("#from").on("change", changeInput);
-// $("#data").on("input", );
-
 $(document).on("input", "#data", function () {
     flag = $(this).attr('data-flag');
-    // alert(flag);
     url = "./" + flag + "test.php";
     changeInput();
 })
-// });

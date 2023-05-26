@@ -1,10 +1,8 @@
 <?php
-
 if (isset($_POST['getValue'])) {
     $val = $_POST['inputval'];
     $from = $_POST['inputFrom'];
     $to = $_POST['inputTo'];
-    // $result = 0;
     switch (true) {
         case $from == "fromKM" && $to === "toMeter":
             $result = $val * 1000;
