@@ -1,9 +1,11 @@
+/* Universal Selector */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Style link Tage */
 a {
     text-decoration: none;
     color: white;
@@ -15,4 +17,9 @@ a {
     text-align: center;
     border: 5px solid #232323;
     padding: 2.5rem;
+}
+
+/* jQuery validation */
+.error {
+    color: red;
 }

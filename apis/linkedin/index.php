@@ -16,7 +16,7 @@ $accessToken = "AQX6oe7V7uBxfynQgIxQTwv5nR1NSHMZRuOuNEdn7YDomPMyc8mqCHu6lHf-bz-w
 </head>
 
 <body>
-    <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86whyw68yu6sc4&redirect_uri=http://dhenish/php_practice/apis/linkedin/accessToken.php&state=fooobar&scope=r_liteprofile%20r_emailaddress%20w_member_social">Click me</a>
+    <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86whyw68yu6sc4&redirect_uri=http://dhenish/php_practice/apis/linkedin/accessToken.php&state=fooobar&scope=r_liteprofile%20r_emailaddress%20w_member_social">Click Here To take Access Token</a>
 </body>
 
 </html>

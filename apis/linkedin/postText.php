@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Linkedin Post</title>
+    <link rel="stylesheet" href="./style.css">
     <script src='./jquery-3.6.4.min.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Form for simple text post -->
     <form action="" id="form">
         <div class="form-floating container mt-5">
             <div class="form-group">
@@ -23,6 +25,7 @@
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./jQuery Validate Library For Validation/js/jquery.validate.min.js"></script>
 </body>
 
 <script src="./script.js"></script>
@@ -30,14 +33,19 @@
 </html>
 
 <?php
-// print_r($GLOBALS);
 if (isset($_POST["textData"])) {
     $returnData = $_POST['textData'];
+
+    // Access token
     $accessToken = "AQUU1a81A3Its0uXB-sVtesYZQjYNrGdGNGwXQn1_QIlZ_dzG7v82nq0vEr7QVCqE-ysOJZ2mYQ0ViqADVUjP_zkV4nBrL7B5b6aB-q6QjMvDKKOGOdabGlfGaXVxYhxB7okp9l6pFqzdIjEuFDW-TvQbcOZ5Hggz11tnsqcFHJ7cMSH0mwmg3elGn5f5HDywk5OgOeQHH93M1mKwzkxzmLTgqt5vPc8xJLEML-e9CfV5oAYQnsxEG61T56UUFhhpkODAmyM9APVfHDmn8WYiav5RjoDKneqLJvL4YFyt7UjEFvyzfhxPSNFyH1rovN5Ll-LOgntucoGf34BZOjtgp97Cjd1IQ";
+
+    // Header Content
     $header = [
         "Content-Type: application/json",
         "Authorization: Bearer $accessToken"
     ];
+
+    // Request body text content
     $data = '{
         "author": "urn:li:person:6kUbqUOMxs",
         "lifecycleState": "PUBLISHED",
@@ -53,6 +61,8 @@ if (isset($_POST["textData"])) {
             "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
         }
     }';
+
+    // curl execution
     $ch = curl_init();
     $url = "https://api.linkedin.com/v2/ugcPosts";
     curl_setopt($ch, CURLOPT_URL, $url);

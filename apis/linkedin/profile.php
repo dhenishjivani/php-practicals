@@ -17,4 +17,4 @@ $result = json_decode($result, 1);
 curl_close($ch);
 echo "<pre>";
 print_r($result);
-echo "<img src='".$result->profilePicture->{'displayImage~'}->elements->{0}->identifiers->{0}->identifier ."'>";
+

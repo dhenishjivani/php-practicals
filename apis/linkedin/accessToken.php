@@ -1,18 +1,27 @@
-<?php 
+<?php
 $ch = curl_init();
+
+// This code is used to generate the access token
 $code = $_GET['code'];
 $clientId = "86whyw68yu6sc4";
+
+// In this url file you can see the access token 
 $redirectUrl = "http://dhenish/php_practice/apis/linkedin/accessToken.php";
 $secretKey = "bfV1hL09y8gqCGUq";
 $url = "https://www.linkedin.com/oauth/v2/accessToken?grant_type=authorization_code&client_id=$clientId&client_secret=$secretKey&code=$code&redirect_uri=$redirectUrl";
 
-curl_setopt($ch , CURLOPT_URL , $url);
-curl_setopt($ch , CURLOPT_RETURNTRANSFER , true);
+// curl setup and execution
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec($ch);
 $result = json_decode($result);
 curl_close($ch);
 echo "<pre>";
 print_r($result);
+
+// Results access_token property 
+$Token = $result->access_token;
+echo $Token;
 ?>
 
 
