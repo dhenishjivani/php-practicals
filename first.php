@@ -10,6 +10,7 @@ echo $test;
 // setcookie ($cookie_name , $cookie_val , time() + 86400 , "/");
 
 // print_r($_COOKIE);
+
 ?>
 
 <html>

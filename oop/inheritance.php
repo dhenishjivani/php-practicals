@@ -25,8 +25,8 @@ class grocery_product extends products
     }
 }
 $gpro = new grocery_product("T-shirt") ;
-$pro = new products("T-shirt");
+// $pro = new products("T-shirt");
 $gpro->detailes();
-$pro->detailes();
+// $pro->detailes();
 
 ?>

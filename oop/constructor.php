@@ -17,7 +17,7 @@ class car
 }
 
 $a = new car();
-$a = new car("White" , "Creata");
+$a = new car("White");
 $a = new car("White" , "Sx4");
 
 // $a->color = "Black";
