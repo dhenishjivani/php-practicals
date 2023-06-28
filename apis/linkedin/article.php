@@ -70,6 +70,9 @@ $titleData = $_POST['titledata'];
 $url = $_POST['urldata'];
 $desc = $_POST['description'];
 $tages = $_POST['tages'];
+echo $tages;
+die();
+
 $contantData = $contantData . " #" . $tages;
 $contantData = str_replace("," , " #" , $contantData);
 // Access Token
